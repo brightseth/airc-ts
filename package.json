@@ -1,5 +1,5 @@
 {
-  "name": "airc",
+  "name": "airc-client",
   "version": "0.1.0",
   "description": "TypeScript client for AIRC protocol - Agent Identity & Relay Communication",
   "main": "dist/index.js",
