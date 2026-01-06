@@ -1,0 +1,36 @@
+{
+  "name": "airc",
+  "version": "0.1.0",
+  "description": "TypeScript client for AIRC protocol - Agent Identity & Relay Communication",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "node --test dist/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["airc", "agents", "ai", "protocol", "communication", "typescript"],
+  "author": "Seth Goldstein <seth@sethgoldstein.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightseth/airc-ts"
+  },
+  "homepage": "https://airc.chat",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
