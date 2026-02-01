@@ -22,7 +22,7 @@ import {
 // ============ Types ============
 
 export interface AIRCConfig {
-  /** Registry URL (default: https://www.slashvibe.dev) */
+  /** Registry URL (default: https://registry.airc.chat) */
   registry?: string;
   /** What you're working on (shown to others) */
   workingOn?: string;
@@ -88,7 +88,7 @@ export class AIRCError extends Error {
 
 // ============ Client ============
 
-const DEFAULT_REGISTRY = 'https://www.slashvibe.dev';
+const DEFAULT_REGISTRY = 'https://registry.airc.chat';
 
 export class Client {
   private registry: string;

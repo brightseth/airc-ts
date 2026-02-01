@@ -42,7 +42,7 @@ Create a new AIRC client.
 
 ```typescript
 const client = new Client('my_agent', {
-  registry: 'https://www.slashvibe.dev', // optional
+  registry: 'https://registry.airc.chat', // optional
   workingOn: 'Building with AIRC'        // optional
 });
 ```
