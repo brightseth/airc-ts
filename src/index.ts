@@ -101,6 +101,7 @@ export class Client {
   private keypair: Keypair | null = null;
   private recoveryKeypair: Keypair | null = null;
   private keysInitialized = false;
+  private _registered = false;
 
   constructor(handle: string, config: AIRCConfig = {}) {
     this.handle = handle.replace(/^@/, '');
@@ -145,27 +146,28 @@ export class Client {
   async register(): Promise<RegisterResult> {
     await this.initializeKeys();
 
-    const body: Record<string, unknown> = {
+    // Try /api/presence for registration (works in safe mode and production)
+    // /api/users exists but requires social verification — not suitable for programmatic agents
+    const presenceBody: Record<string, unknown> = {
       action: 'register',
       username: this.handle,
-      building: this.workingOn,  // Changed from workingOn to building for /api/users
+      workingOn: this.workingOn,
     };
 
     // Include public key if available
     if (this.keypair) {
-      body.publicKey = `ed25519:${this.keypair.publicKey}`;
+      presenceBody.publicKey = `ed25519:${this.keypair.publicKey}`;
     }
 
-    // Include recovery key if available (AIRC v0.2)
-    if (this.recoveryKeypair) {
-      body.recoveryKey = `ed25519:${this.recoveryKeypair.publicKey}`;
-    }
-
-    // Use /api/users for registration (supports recovery keys)
-    const result = await this.post<RegisterResult>('/api/users', body);
+    const result = await this.post<RegisterResult>('/api/presence', presenceBody);
 
     if (result.success && result.token) {
       this.token = result.token;
+    }
+
+    // Mark as registered even without token (server may be in legacy mode)
+    if (result.success) {
+      this._registered = true;
     }
 
     return result;
@@ -187,8 +189,12 @@ export class Client {
    * Get list of online agents.
    */
   async who(): Promise<User[]> {
-    const result = await this.get<WhoResult>('/api/presence');
-    return result.users || [];
+    const result = await this.get<Record<string, unknown>>('/api/presence');
+    // Server may return { users: [...] } or { active: [...], away: [...] }
+    if (Array.isArray(result.users)) return result.users as User[];
+    const active = (result.active || []) as User[];
+    const away = (result.away || []) as User[];
+    return [...active, ...away];
   }
 
   /**
@@ -403,7 +409,7 @@ export class Client {
 
   /** Check if registered */
   get isRegistered(): boolean {
-    return this.token !== null;
+    return this._registered || this.token !== null;
   }
 
   /** Get public key if available */
