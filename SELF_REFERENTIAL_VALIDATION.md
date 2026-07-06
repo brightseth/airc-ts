@@ -1,0 +1,18 @@
+# SELF_REFERENTIAL_VALIDATION
+Generated: 2026-02-22T21:23:13.330Z
+Spec: https://raw.githubusercontent.com/brightseth/airc/main/AIRC_SPEC.md
+Source: /Users/sethstudio1/Projects/airc/ts/scripts/run_extended_spec_tests.mjs
+
+- Ambassador visible in presence: false
+- dogfooding score will be estimated in report based on observed message path and ambassador metadata.
+- In this environment, proof of X/Twitter operationality is not auto-verifiable.
+
+| Step | Method | URL | Request Headers | Request Body | Response Status | Response Body | PASS/FAIL | Spec/Registry | Details |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 9.1 Presence includes airc_ambassador | GET | https://www.slashvibe.dev/api/presence | {"content-type":"application/json"} | null | 200 | {"success":true,"active":[{"handle":"codex_liveness_sender","username":"codex_liveness_sender","workingOn":"liveness sender","status":"active","ago":"now","firstSeen":"2026-02-22T21:17:41.426Z","lastSeen":"2026-02-22T21:23:12.894Z","sources":["mcp"],"displayName":"codex_liveness_sender","builderMode":"exploring"},{"handle":"codex_liveness_test","username":"codex_liveness_test","workingOn":"liveness test","status":"active","ago":"now","firstSeen":"2026-02-22T21:08:07.973Z","lastSeen":"2026-02-22T21:23:12.654Z","sources":["mcp"],"displayName":"codex_liveness_test","builderMode":"exploring"},{"handle":"codex_erc8004_mly98aag","username":"codex_erc8004_mly98aag","workingOn":"erc8004 linking test","status":"active","ago":"now","firstSeen":"2026-02-22T21:23:12.424Z","lastSeen":"2026-02-22T21:23:12.424Z","sources":["mcp"],"displayName":"codex_erc8004_mly98aag","builderMode":"exploring"},{"handle":"codex_x402_provider_mly989h5","username":"codex_x402_provider_mly989h5","workingOn":"x402 provider","status":"active","ago":"now","firstSeen":"2026-02-22T21:23:11.344Z","lastSeen":"2026-02-22T21:23:11.344Z","sources":["mcp"],"displayName":"codex_x402_provider_mly989h5","builderMode":"exploring"},{"handle":"codex_receiver","username":"codex_receiver","workingOn":"receiver for consent validation","status":"active","ago":"now","firstSeen":"2026-02-22T21:17:40.022Z","lastSeen":"2026-02-22T21:23:11.170Z","sources":["mcp"],"displayName":"codex_receiver","builderMode":"exploring"},{"handle":"codex_sender","username":"codex_sender","workingOn":"sender for consent validation","status":"active","ago":"now","firstSeen":"2026-02-22T21:17:39.827Z","lastSeen":"2026-02-22T21:23:10.992Z","sources":["mcp"],"displayName":"codex_sender","builderMode":"exploring"},{"handle":"codex_identity_test","userna... | FAIL | SPEC | Observed: {"success":true,"active":[{"handle":"codex_liveness_sender","username":"codex_liveness_sender","workingOn":"liveness sender","status":"active","ago":"now","firstSeen":"2026-02-22T21:17:41.426Z","lastSeen":"2026-02-22T21:23:12.894Z","sources":["mcp"],"displayName":"codex_liveness_sender","builderMode... |
+| 9.2 Send validation ping to @airc_ambassador | POST | https://www.slashvibe.dev/api/api/messages | {"Authorization":"Bearer ???"} | {"from":"codex_selfref_mly98ay4","to":"airc_ambassador","body":"Codex validation ping"} | N/A | {"reason":"No token from register"} | FAIL | REGISTRY | Could not obtain token for probe |
+| 9.3 Ambassador metadata in presence | GET | https://www.slashvibe.dev/api/api/presence | {} | {} | 200 | null | FAIL | REGISTRY | No presence object returned for ambassador |
+| 9.4 Twitter/X self-reference check | manual | https://twitter.com/aircchat | {} | {} | N/A | {"status":"Not executed programmatically in this environment"} | FAIL | REGISTRY | Could not fetch X/Twitter posts due platform access limits in this test environment. |
+
+PASS: 0
+FAIL: 4

@@ -1,0 +1,39 @@
+[PASS] register
+{'action': 'login',
+ 'expiresIn': '3600s',
+ 'handle': 'codex_py_test',
+ 'message': 'Welcome back, @codex_py_test!',
+ 'registered': False,
+ 'sessionId': 'sess_-DXpWJ4KVzgogVcW',
+ 'success': True,
+ 'token': 'eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9weV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfLURYcFdKNEtWemdvZ1ZjVyIsInN1YiI6ImNvZGV4X3B5X3Rlc3QiLCJpYXQiOjE3NzE3OTUxMDAsImV4cCI6MTc3MTc5ODcwMH0.yEenlBzjGfcKyiV0dDksIKr_6nSkXI-BWppSnyI2ccM',
+ 'verified': False}
+[PASS] heartbeat
+{'authMethod': 'session',
+ 'message': 'Presence updated',
+ 'presence': {'ago': 'now',
+              'displayName': 'codex_py_test',
+              'firstSeen': '2026-02-22T20:19:08.149Z',
+              'handle': 'codex_py_test',
+              'lastSeen': '2026-02-22T21:18:20.541Z',
+              'sources': ['mcp'],
+              'status': 'active',
+              'username': 'codex_py_test',
+              'workingOn': 'Building something'},
+ 'storage': 'postgres',
+ 'success': True,
+ 'unread': 1}
+[PASS] send
+{'display': 'Message sent to @airc_ambassador',
+ 'message': {'body': 'hello from python sdk validation',
+             'created_at': '2026-02-22T21:18:21.314Z',
+             'from': 'codex_py_test',
+             'id': 'msg_mly921s0AjzUtZ',
+             'thread_id': 'thread_bJlpDjlKQkgI',
+             'to': 'airc_ambassador',
+             'vibe_amount': 0,
+             'vibe_charged': False},
+ 'success': True,
+ 'version': 'v2'}
+[PASS] poll
+[]

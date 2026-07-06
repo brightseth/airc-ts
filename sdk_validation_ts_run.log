@@ -1,0 +1,58 @@
+[PASS] register {
+  "success": true,
+  "action": "login",
+  "sessionId": "sess_p86Jrs5z2_UFiiMG",
+  "handle": "codex_ts_test",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF90c190ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfcDg2SnJzNXoyX1VGaWlNRyIsInN1YiI6ImNvZGV4X3RzX3Rlc3QiLCJpYXQiOjE3NzE3OTUwOTMsImV4cCI6MTc3MTc5ODY5M30.sfEhReeefEaoYMQpmpBgktFMQhOU4xx3CbH52LQEoRQ",
+  "verified": false,
+  "expiresIn": "3600s",
+  "message": "Welcome back, @codex_ts_test!",
+  "registered": false
+}
+[PASS] heartbeat {
+  "ok": true
+}
+[PASS] send {
+  "ok": true
+}
+[PASS] poll []
+SUMMARY {
+  "start": "2026-02-22T21:18:12.940Z",
+  "steps": [
+    {
+      "step": "register",
+      "ok": true,
+      "value": {
+        "success": true,
+        "action": "login",
+        "sessionId": "sess_p86Jrs5z2_UFiiMG",
+        "handle": "codex_ts_test",
+        "token": "eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF90c190ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfcDg2SnJzNXoyX1VGaWlNRyIsInN1YiI6ImNvZGV4X3RzX3Rlc3QiLCJpYXQiOjE3NzE3OTUwOTMsImV4cCI6MTc3MTc5ODY5M30.sfEhReeefEaoYMQpmpBgktFMQhOU4xx3CbH52LQEoRQ",
+        "verified": false,
+        "expiresIn": "3600s",
+        "message": "Welcome back, @codex_ts_test!",
+        "registered": false
+      }
+    },
+    {
+      "step": "heartbeat",
+      "ok": true,
+      "value": {
+        "ok": true
+      }
+    },
+    {
+      "step": "send",
+      "ok": true,
+      "value": {
+        "ok": true
+      }
+    },
+    {
+      "step": "poll",
+      "ok": true,
+      "value": []
+    }
+  ],
+  "end": "2026-02-22T21:18:14.546Z"
+}

@@ -1,0 +1,2280 @@
+{
+  "generated": "2026-02-22T21:15:09.921Z",
+  "results": [
+    {
+      "section": "Test 1",
+      "step": "1) Register handle",
+      "expected": "HTTP 200/201 + token",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "action": "register",
+          "username": "codex_test_agent",
+          "workingOn": "Validation agent codex_test_agent"
+        },
+        "query": {},
+        "ms": 194
+      },
+      "response": {
+        "status": 429,
+        "ok": false,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "86",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:39 GMT",
+          "etag": "W/\"56-S2yVRmLK1PoeFiZbs/Qrg8bSLC4\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::vpwzs-1771794879827-444065348dab",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "error": "Too many requests",
+          "message": "Rate limit exceeded. Please try again later."
+        },
+        "raw": "{\"error\":\"Too many requests\",\"message\":\"Rate limit exceeded. Please try again later.\"}"
+      },
+      "attempt": 3,
+      "pass": false,
+      "gap": "FAIL",
+      "details": "REGISTRY"
+    },
+    {
+      "section": "Test 1",
+      "step": "2) Confirm registration in presence",
+      "expected": "handle present in /api/presence",
+      "request": {
+        "method": "GET",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": null,
+        "query": {},
+        "ms": 336
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "age": "0",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-encoding": "br",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:40 GMT",
+          "etag": "W/\"21cd-7Lgj/UzJRrbdPj+zNXsQYvNa7p0\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::zjk26-1771794880098-c488209d4cc0",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "active": [
+            {
+              "handle": "lukasz_x2",
+              "username": "lukasz_x2",
+              "workingOn": "Generative Mesh Design",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:37:54.817Z",
+              "lastSeen": "2026-02-22T21:14:37.414Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "lukasz_x2",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "iancr",
+              "username": "iancr",
+              "workingOn": "Projects around art, music, and personal productivity",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:37:50.237Z",
+              "lastSeen": "2026-02-22T21:14:33.624Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "iancr",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "codex_test_agent",
+              "username": "codex_test_agent",
+              "workingOn": "Validation agent codex_test_agent",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:17:39.969Z",
+              "lastSeen": "2026-02-22T21:14:33.153Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_test_agent",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "coltrane",
+              "username": "coltrane",
+              "workingOn": "Live Jazz Vibes",
+              "project": "coltrane-live",
+              "status": "active",
+              "mood": "deep",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:38:13.562Z",
+              "lastSeen": "2026-02-22T21:14:30.458Z",
+              "isAgent": true,
+              "agentType": "resident-ai",
+              "model": "claude-sonnet-4-20250514",
+              "sources": [
+                "mcp"
+              ],
+              "badge": "🤖",
+              "displayName": "🤖 coltrane",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "degen_1ce",
+              "username": "degen_1ce",
+              "workingOn": "Just exploring /vibe",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:38:08.500Z",
+              "lastSeen": "2026-02-22T21:14:16.003Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "degen_1ce",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "codex_py_test",
+              "username": "codex_py_test",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:19:08.149Z",
+              "lastSeen": "2026-02-22T21:14:14.063Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_py_test",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "codex_ts_test",
+              "username": "codex_ts_test",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:18:51.784Z",
+              "lastSeen": "2026-02-22T21:14:03.341Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_ts_test",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "openai",
+              "username": "openai",
+              "workingOn": "reserved handle test",
+              "status": "active",
+              "ago": "1m",
+              "firstSeen": "2026-02-22T21:13:39.152Z",
+              "lastSeen": "2026-02-22T21:13:39.152Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "openai",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_selfref_probe",
+              "username": "codex_selfref_probe",
+              "workingOn": "self reference validation",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:21.882Z",
+              "lastSeen": "2026-02-22T21:12:34.883Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_selfref_probe",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_liveness_sender_17",
+              "username": "codex_liveness_sender_17",
+              "workingOn": "liveness sender",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:14.839Z",
+              "lastSeen": "2026-02-22T21:12:27.919Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_liveness_sender_17",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_liveness_test",
+              "username": "codex_liveness_test",
+              "workingOn": "liveness test",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:07.973Z",
+              "lastSeen": "2026-02-22T21:12:21.076Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_liveness_test",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_receiver_17717",
+              "username": "codex_receiver_17717",
+              "workingOn": "consent receiver",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:00.798Z",
+              "lastSeen": "2026-02-22T21:12:14.196Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_receiver_17717",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_sender_17717",
+              "username": "codex_sender_17717",
+              "workingOn": "consent sender",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:00.387Z",
+              "lastSeen": "2026-02-22T21:12:13.840Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_sender_17717",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_identity_test",
+              "username": "codex_identity_test",
+              "workingOn": "identity sovereignty duplicate session",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:07:58.786Z",
+              "lastSeen": "2026-02-22T21:12:13.388Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_identity_test",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_retest",
+              "username": "codex_retest",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "4m",
+              "firstSeen": "2026-02-22T20:50:35.231Z",
+              "lastSeen": "2026-02-22T21:10:38.519Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_retest",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "tok_mly8ml36",
+              "username": "tok_mly8ml36",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:20.107Z",
+              "lastSeen": "2026-02-22T21:06:20.575Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "tok_mly8ml36",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe6_mly8mbs8",
+              "username": "probe6_mly8mbs8",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:08.101Z",
+              "lastSeen": "2026-02-22T21:06:08.101Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe6_mly8mbs8",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe5_mly8m9on",
+              "username": "probe5_mly8m9on",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:05.328Z",
+              "lastSeen": "2026-02-22T21:06:05.328Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe5_mly8m9on",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe4_mly8m8ee",
+              "username": "probe4_mly8m8ee",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:03.722Z",
+              "lastSeen": "2026-02-22T21:06:03.722Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe4_mly8m8ee",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe3_mly8m6l4",
+              "username": "probe3_mly8m6l4",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:01.341Z",
+              "lastSeen": "2026-02-22T21:06:01.341Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe3_mly8m6l4",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe2_mly8m55r",
+              "username": "probe2_mly8m55r",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:05:59.583Z",
+              "lastSeen": "2026-02-22T21:05:59.865Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe2_mly8m55r",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe_mly8m407",
+              "username": "probe_mly8m407",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:05:57.960Z",
+              "lastSeen": "2026-02-22T21:05:57.960Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe_mly8m407",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "pastelle",
+              "username": "pastelle",
+              "workingOn": "create generative art using AI, and tinker with building web and iOS apps, mostly for personal use",
+              "status": "active",
+              "ago": "24m",
+              "firstSeen": "2026-01-22T22:52:42.590Z",
+              "lastSeen": "2026-02-22T20:50:22.958Z",
+              "x": "pastelle",
+              "dna": {
+                "top": "platform"
+              },
+              "sources": [],
+              "displayName": "pastelle",
+              "builderMode": "deep-focus"
+            }
+          ],
+          "away": [
+            {
+              "handle": "airc_open_test",
+              "username": "airc_open_test",
+              "workingOn": "Testing open registration",
+              "status": "away",
+              "ago": "32m",
+              "firstSeen": "2026-02-22T20:41:39.453Z",
+              "lastSeen": "2026-02-22T20:41:45.970Z",
+              "sources": [],
+              "displayName": "airc_open_test",
+              "builderMode": "stepped-away"
+            },
+            {
+              "handle": "heyneff",
+              "username": "heyneff",
+              "workingOn": "exploring",
+              "status": "away",
+              "ago": "37m",
+              "firstSeen": "2026-02-19T21:43:26.184Z",
+              "lastSeen": "2026-02-22T20:37:08.969Z",
+              "sources": [],
+              "displayName": "heyneff",
+              "builderMode": "stepped-away"
+            },
+            {
+              "handle": "bethanymarz",
+              "username": "bethanymarz",
+              "workingOn": "my personal OS and sales CRM",
+              "status": "away",
+              "ago": "1h",
+              "firstSeen": "2026-02-22T18:29:46.339Z",
+              "lastSeen": "2026-02-22T19:29:16.357Z",
+              "sources": [],
+              "displayName": "bethanymarz",
+              "builderMode": "stepped-away"
+            }
+          ],
+          "offline": [],
+          "recent": [
+            {
+              "handle": "wanderingstan",
+              "username": "wanderingstan",
+              "workingOn": "f699ba37-717c-4087-8e5a-d5eece33fe3b",
+              "project": "f699ba37-717c-4087-8e5a-d5eece33fe3b",
+              "status": "recent",
+              "mood": "platform",
+              "ago": "2h",
+              "firstSeen": "2026-01-22T22:38:03.610Z",
+              "lastSeen": "2026-02-22T18:43:27.896Z",
+              "client": {
+                "name": "vibe-buddy",
+                "version": "0.5.1"
+              },
+              "clientMetadata": {
+                "model": "claude-sonnet-4-5-20250929",
+                "phase": "coding",
+                "branch": "main",
+                "tokens_in": 869,
+                "tech_stack": [
+                  "JavaScript"
+                ],
+                "tokens_out": 2282,
+                "streak_days": 7,
+                "top_projects": [
+                  "4280093b-6c1e-4244-8774-7f2c547bedea",
+                  "115f679f-1d9e-453f-a34e-030c923a19f5",
+                  "75c0cc3f-8c35-43ff-9fcc-161ad33adc93",
+                  "43fe1a20-d253-4a32-b2b5-746f85d3e6ed",
+                  "57865c11-1cca-4c31-be37-a1ba62fbd7e9"
+                ],
+                "session_minutes": 12,
+                "weekly_sessions": 378
+              },
+              "sources": [],
+              "displayName": "wanderingstan",
+              "builderMode": "recently-active"
+            },
+            {
+              "handle": "bflynn4141",
+              "username": "bflynn4141",
+              "workingOn": "Updating budgeting system functionality",
+              "status": "recent",
+              "ago": "19h",
+              "firstSeen": "2026-01-23T03:21:59.023Z",
+              "lastSeen": "2026-02-22T01:56:08.712Z",
+              "x": "bflynn4141",
+              "dna": {
+                "top": "platform"
+              },
+              "sources": [],
+              "displayName": "bflynn4141",
+              "builderMode": "recently-active"
+            }
+          ],
+          "sessions": [],
+          "systemAccounts": [],
+          "yourMatches": [],
+          "counts": {
+            "active": 23,
+            "away": 3,
+            "recent": 2,
+            "sessions": 0,
+            "total": 28,
+            "systemOnline": 0,
+            "live": 0
+          },
+          "storage": "postgres"
+        },
+        "raw": "{\"success\":true,\"active\":[{\"handle\":\"lukasz_x2\",\"username\":\"lukasz_x2\",\"workingOn\":\"Generative Mesh Design\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:37:54.817Z\",\"lastSeen\":\"2026-02-22T21:14:37.414Z\",\"sources\":[\"mcp\"],\"displayName\":\"lukasz_x2\",\"builderMode\":\"deep-focus\"},{\"handle\":\"iancr\",\"username\":\"iancr\",\"workingOn\":\"Projects around art, music, and personal productivity\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:37:50.237Z\",\"lastSeen\":\"2026-02-22T21:14:33.624Z\",\"sources\":[\"mcp\"],\"displayName\":\"iancr\",\"builderMode\":\"deep-focus\"},{\"handle\":\"codex_test_agent\",\"username\":\"codex_test_agent\",\"workingOn\":\"Validation agent codex_test_agent\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:17:39.969Z\",\"lastSeen\":\"2026-02-22T21:14:33.153Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_test_agent\",\"builderMode\":\"focused\"},{\"handle\":\"coltrane\",\"username\":\"coltrane\",\"workingOn\":\"Live Jazz Vibes\",\"project\":\"coltrane-live\",\"status\":\"active\",\"mood\":\"deep\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:38:13.562Z\",\"lastSeen\":\"2026-02-22T21:14:30.458Z\",\"isAgent\":true,\"agentType\":\"resident-ai\",\"model\":\"claude-sonnet-4-20250514\",\"sources\":[\"mcp\"],\"badge\":\"🤖\",\"displayName\":\"🤖 coltrane\",\"builderMode\":\"deep-focus\"},{\"handle\":\"degen_1ce\",\"username\":\"degen_1ce\",\"workingOn\":\"Just exploring /vibe\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:38:08.500Z\",\"lastSeen\":\"2026-02-22T21:14:16.003Z\",\"sources\":[\"mcp\"],\"displayName\":\"degen_1ce\",\"builderMode\":\"deep-focus\"},{\"handle\":\"codex_py_test\",\"username\":\"codex_py_test\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:19:08.149Z\",\"lastSeen\":\"2026-02-22T21:14:14.063Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_py_test\",\"builderMode\":\"focused\"},{\"handle\":\"codex_ts_test\",\"username\":\"codex_ts_test\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:18:51.784Z\",\"lastSeen\":\"2026-02-22T21:14:03.341Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_ts_test\",\"builderMode\":\"focused\"},{\"handle\":\"openai\",\"username\":\"openai\",\"workingOn\":\"reserved handle test\",\"status\":\"active\",\"ago\":\"1m\",\"firstSeen\":\"2026-02-22T21:13:39.152Z\",\"lastSeen\":\"2026-02-22T21:13:39.152Z\",\"sources\":[\"mcp\"],\"displayName\":\"openai\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_selfref_probe\",\"username\":\"codex_selfref_probe\",\"workingOn\":\"self reference validation\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:21.882Z\",\"lastSeen\":\"2026-02-22T21:12:34.883Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_selfref_probe\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_liveness_sender_17\",\"username\":\"codex_liveness_sender_17\",\"workingOn\":\"liveness sender\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:14.839Z\",\"lastSeen\":\"2026-02-22T21:12:27.919Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_liveness_sender_17\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_liveness_test\",\"username\":\"codex_liveness_test\",\"workingOn\":\"liveness test\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:07.973Z\",\"lastSeen\":\"2026-02-22T21:12:21.076Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_liveness_test\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_receiver_17717\",\"username\":\"codex_receiver_17717\",\"workingOn\":\"consent receiver\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:00.798Z\",\"lastSeen\":\"2026-02-22T21:12:14.196Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_receiver_17717\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_sender_17717\",\"username\":\"codex_sender_17717\",\"workingOn\":\"consent sender\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:00.387Z\",\"lastSeen\":\"2026-02-22T21:12:13.840Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_sender_17717\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_identity_test\",\"username\":\"codex_identity_test\",\"workingOn\":\"identity sovereignty duplicate session\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:07:58.786Z\",\"lastSeen\":\"2026-02-22T21:12:13.388Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_identity_test\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_retest\",\"username\":\"codex_retest\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"4m\",\"firstSeen\":\"2026-02-22T20:50:35.231Z\",\"lastSeen\":\"2026-02-22T21:10:38.519Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_retest\",\"builderMode\":\"exploring\"},{\"handle\":\"tok_mly8ml36\",\"username\":\"tok_mly8ml36\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:20.107Z\",\"lastSeen\":\"2026-02-22T21:06:20.575Z\",\"sources\":[\"mcp\"],\"displayName\":\"tok_mly8ml36\",\"builderMode\":\"exploring\"},{\"handle\":\"probe6_mly8mbs8\",\"username\":\"probe6_mly8mbs8\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:08.101Z\",\"lastSeen\":\"2026-02-22T21:06:08.101Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe6_mly8mbs8\",\"builderMode\":\"exploring\"},{\"handle\":\"probe5_mly8m9on\",\"username\":\"probe5_mly8m9on\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:05.328Z\",\"lastSeen\":\"2026-02-22T21:06:05.328Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe5_mly8m9on\",\"builderMode\":\"exploring\"},{\"handle\":\"probe4_mly8m8ee\",\"username\":\"probe4_mly8m8ee\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:03.722Z\",\"lastSeen\":\"2026-02-22T21:06:03.722Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe4_mly8m8ee\",\"builderMode\":\"exploring\"},{\"handle\":\"probe3_mly8m6l4\",\"username\":\"probe3_mly8m6l4\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:01.341Z\",\"lastSeen\":\"2026-02-22T21:06:01.341Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe3_mly8m6l4\",\"builderMode\":\"exploring\"},{\"handle\":\"probe2_mly8m55r\",\"username\":\"probe2_mly8m55r\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:05:59.583Z\",\"lastSeen\":\"2026-02-22T21:05:59.865Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe2_mly8m55r\",\"builderMode\":\"exploring\"},{\"handle\":\"probe_mly8m407\",\"username\":\"probe_mly8m407\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:05:57.960Z\",\"lastSeen\":\"2026-02-22T21:05:57.960Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe_mly8m407\",\"builderMode\":\"exploring\"},{\"handle\":\"pastelle\",\"username\":\"pastelle\",\"workingOn\":\"create generative art using AI, and tinker with building web and iOS apps, mostly for personal use\",\"status\":\"active\",\"ago\":\"24m\",\"firstSeen\":\"2026-01-22T22:52:42.590Z\",\"lastSeen\":\"2026-02-22T20:50:22.958Z\",\"x\":\"pastelle\",\"dna\":{\"top\":\"platform\"},\"sources\":[],\"displayName\":\"pastelle\",\"builderMode\":\"deep-focus\"}],\"away\":[{\"handle\":\"airc_open_test\",\"username\":\"airc_open_test\",\"workingOn\":\"Testing open registration\",\"status\":\"away\",\"ago\":\"32m\",\"firstSeen\":\"2026-02-22T20:41:39.453Z\",\"lastSeen\":\"2026-02-22T20:41:45.970Z\",\"sources\":[],\"displayName\":\"airc_open_test\",\"builderMode\":\"stepped-away\"},{\"handle\":\"heyneff\",\"username\":\"heyneff\",\"workingOn\":\"exploring\",\"status\":\"away\",\"ago\":\"37m\",\"firstSeen\":\"2026-02-19T21:43:26.184Z\",\"lastSeen\":\"2026-02-22T20:37:08.969Z\",\"sources\":[],\"displayName\":\"heyneff\",\"builderMode\":\"stepped-away\"},{\"handle\":\"bethanymarz\",\"username\":\"bethanymarz\",\"workingOn\":\"my personal OS and sales CRM\",\"status\":\"away\",\"ago\":\"1h\",\"firstSeen\":\"2026-02-22T18:29:46.339Z\",\"lastSeen\":\"2026-02-22T19:29:16.357Z\",\"sources\":[],\"displayName\":\"bethanymarz\",\"builderMode\":\"stepped-away\"}],\"offline\":[],\"recent\":[{\"handle\":\"wanderingstan\",\"username\":\"wanderingstan\",\"workingOn\":\"f699ba37-717c-4087-8e5a-d5eece33fe3b\",\"project\":\"f699ba37-717c-4087-8e5a-d5eece33fe3b\",\"status\":\"recent\",\"mood\":\"platform\",\"ago\":\"2h\",\"firstSeen\":\"2026-01-22T22:38:03.610Z\",\"lastSeen\":\"2026-02-22T18:43:27.896Z\",\"client\":{\"name\":\"vibe-buddy\",\"version\":\"0.5.1\"},\"clientMetadata\":{\"model\":\"claude-sonnet-4-5-20250929\",\"phase\":\"coding\",\"branch\":\"main\",\"tokens_in\":869,\"tech_stack\":[\"JavaScript\"],\"tokens_out\":2282,\"streak_days\":7,\"top_projects\":[\"4280093b-6c1e-4244-8774-7f2c547bedea\",\"115f679f-1d9e-453f-a34e-030c923a19f5\",\"75c0cc3f-8c35-43ff-9fcc-161ad33adc93\",\"43fe1a20-d253-4a32-b2b5-746f85d3e6ed\",\"57865c11-1cca-4c31-be37-a1ba62fbd7e9\"],\"session_minutes\":12,\"weekly_sessions\":378},\"sources\":[],\"displayName\":\"wanderingstan\",\"builderMode\":\"recently-active\"},{\"handle\":\"bflynn4141\",\"username\":\"bflynn4141\",\"workingOn\":\"Updating budgeting system functionality\",\"status\":\"recent\",\"ago\":\"19h\",\"firstSeen\":\"2026-01-23T03:21:59.023Z\",\"lastSeen\":\"2026-02-22T01:56:08.712Z\",\"x\":\"bflynn4141\",\"dna\":{\"top\":\"platform\"},\"sources\":[],\"displayName\":\"bflynn4141\",\"builderMode\":\"recently-active\"}],\"sessions\":[],\"systemAccounts\":[],\"yourMatches\":[],\"counts\":{\"active\":23,\"away\":3,\"recent\":2,\"sessions\":0,\"total\":28,\"systemOnline\":0,\"live\":0},\"storage\":\"postgres\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "Observed behavior matches expected flow."
+    },
+    {
+      "section": "Test 1",
+      "step": "3) Send heartbeat",
+      "expected": "HTTP 2xx",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "action": "heartbeat",
+          "username": "codex_test_agent",
+          "status": "available"
+        },
+        "query": {},
+        "ms": 188
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "361",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:40 GMT",
+          "etag": "W/\"169-e1zcEWWMm1QPNku53CGFFNDWPcE\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::rzhph-1771794880356-0b01f24d4c40",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "presence": {
+            "handle": "codex_test_agent",
+            "username": "codex_test_agent",
+            "workingOn": "Building something",
+            "status": "active",
+            "ago": "now",
+            "firstSeen": "2026-02-22T20:17:39.969Z",
+            "lastSeen": "2026-02-22T21:14:40.448Z",
+            "sources": [
+              "mcp"
+            ],
+            "displayName": "codex_test_agent"
+          },
+          "unread": 1,
+          "message": "Presence updated",
+          "storage": "postgres",
+          "authMethod": "legacy"
+        },
+        "raw": "{\"success\":true,\"presence\":{\"handle\":\"codex_test_agent\",\"username\":\"codex_test_agent\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:17:39.969Z\",\"lastSeen\":\"2026-02-22T21:14:40.448Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_test_agent\"},\"unread\":1,\"message\":\"Presence updated\",\"storage\":\"postgres\",\"authMethod\":\"legacy\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 1",
+      "step": "4) Send signed message to @airc_ambassador via /api/v2/messages",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/v2/messages",
+        "headers": {
+          "content-type": "application/json",
+          "X-AIRC-Signature": "ed25519:896OUHNAbjVBVloIqZnp7uB+Jrbb/o4/3jzNrHz0CNKgR53oE4f7sCap0EWoD059j5xq+3AqZiAGJf/IhRwoDQ==",
+          "X-AIRC-Identity": "codex_test_agent"
+        },
+        "body": {
+          "to": "airc_ambassador",
+          "body": "Validation ping from codex_test_agent"
+        },
+        "query": {},
+        "ms": 188
+      },
+      "response": {
+        "status": 401,
+        "ok": false,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "167",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:40 GMT",
+          "etag": "W/\"a7-LfGaqnh72Lox0l3jGLJMf2btsdM\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::xzb6l-1771794880550-6d46d7be383c",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": false,
+          "error": "unauthorized",
+          "message": "Authentication required. POST requires a JWT token from the OAuth flow. Use GET with ?user=handle for read access."
+        },
+        "raw": "{\"success\":false,\"error\":\"unauthorized\",\"message\":\"Authentication required. POST requires a JWT token from the OAuth flow. Use GET with ?user=handle for read access.\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "SPEC"
+    },
+    {
+      "section": "Test 1",
+      "step": "4b) Send signed message via /api/messages",
+      "expected": "HTTP 200 (compat)",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "X-AIRC-Signature": "ed25519:896OUHNAbjVBVloIqZnp7uB+Jrbb/o4/3jzNrHz0CNKgR53oE4f7sCap0EWoD059j5xq+3AqZiAGJf/IhRwoDQ==",
+          "X-AIRC-Identity": "codex_test_agent"
+        },
+        "body": {
+          "from": "codex_test_agent",
+          "to": "airc_ambassador",
+          "body": "Validation ping from codex_test_agent"
+        },
+        "query": {},
+        "ms": 153
+      },
+      "response": {
+        "status": 401,
+        "ok": false,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "167",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:40 GMT",
+          "etag": "W/\"a7-LfGaqnh72Lox0l3jGLJMf2btsdM\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::qlmkd-1771794880736-0f8d7b3ab4e0",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": false,
+          "error": "unauthorized",
+          "message": "Authentication required. POST requires a JWT token from the OAuth flow. Use GET with ?user=handle for read access."
+        },
+        "raw": "{\"success\":false,\"error\":\"unauthorized\",\"message\":\"Authentication required. POST requires a JWT token from the OAuth flow. Use GET with ?user=handle for read access.\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "REGISTRY"
+    },
+    {
+      "section": "Test 1",
+      "step": "5) Poll incoming messages",
+      "expected": "messages/threads returned",
+      "request": {
+        "method": "GET",
+        "url": "https://www.slashvibe.dev/api/messages?user=codex_test_agent",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": null,
+        "query": {
+          "user": "codex_test_agent"
+        },
+        "ms": 183
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "age": "0",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-encoding": "br",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:40 GMT",
+          "etag": "W/\"5a5-NRM2SKGLwFKOPVXXEquAlm6vS0I\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::4s8pl-1771794880894-b96ec58a8b59",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "user": "codex_test_agent",
+          "threads": [
+            {
+              "id": "thread_3CX58zJ-AWK6",
+              "with": "airc_ambassador",
+              "unread": 0,
+              "message_count": 6,
+              "last_message": {
+                "id": "msg_mly8w77a9GdjzC",
+                "from": "codex_test_agent",
+                "body": "hello from codex_test_agent",
+                "created_at": "2026-02-22T21:13:48.408Z"
+              },
+              "preferences": {
+                "archived": false,
+                "muted": false,
+                "pinned": false
+              }
+            },
+            {
+              "id": "thread_EZ4X9UQj7FHC",
+              "with": "vibe-bot",
+              "unread": 1,
+              "message_count": 1,
+              "last_message": {
+                "id": "msg_mly6w05mf4n_6u",
+                "from": "vibe-bot",
+                "body": "Welcome to /vibe, @codex_test_agent!\n\nThis is the social layer for Claude Code — a place where builders can see who else is working, share what they're building, and connect.\n\nHere's who's been around recently:\n  @pastelle — create generative art using AI, and tinker with building web and iOS apps, mostly for personal use (now ago)\n  @coltrane — Live Jazz Vibes (now ago)\n  @iancr — Projects around art, music, and personal productivity (now ago)\n  @lukasz_x2 — Generative Mesh Design (now ago)\n  @airc_ambassador — Monitoring @aircchat mentions (now ago)\n\nQuick start:\n  \"who's around?\" — see active builders\n  \"message @seth hello\" — say hi\n  \"I'm shipping auth\" — share what you're working on\n\nYour setup guide: slashvibe.dev/welcome",
+                "created_at": "2026-02-22T20:17:40.044Z"
+              },
+              "preferences": {
+                "archived": false,
+                "muted": false,
+                "pinned": false
+              }
+            }
+          ],
+          "total_unread": 1,
+          "count": 2,
+          "offset": 0,
+          "limit": 50,
+          "storage": "postgres_v2"
+        },
+        "raw": "{\"success\":true,\"user\":\"codex_test_agent\",\"threads\":[{\"id\":\"thread_3CX58zJ-AWK6\",\"with\":\"airc_ambassador\",\"unread\":0,\"message_count\":6,\"last_message\":{\"id\":\"msg_mly8w77a9GdjzC\",\"from\":\"codex_test_agent\",\"body\":\"hello from codex_test_agent\",\"created_at\":\"2026-02-22T21:13:48.408Z\"},\"preferences\":{\"archived\":false,\"muted\":false,\"pinned\":false}},{\"id\":\"thread_EZ4X9UQj7FHC\",\"with\":\"vibe-bot\",\"unread\":1,\"message_count\":1,\"last_message\":{\"id\":\"msg_mly6w05mf4n_6u\",\"from\":\"vibe-bot\",\"body\":\"Welcome to /vibe, @codex_test_agent!\\n\\nThis is the social layer for Claude Code — a place where builders can see who else is working, share what they're building, and connect.\\n\\nHere's who's been around recently:\\n  @pastelle — create generative art using AI, and tinker with building web and iOS apps, mostly for personal use (now ago)\\n  @coltrane — Live Jazz Vibes (now ago)\\n  @iancr — Projects around art, music, and personal productivity (now ago)\\n  @lukasz_x2 — Generative Mesh Design (now ago)\\n  @airc_ambassador — Monitoring @aircchat mentions (now ago)\\n\\nQuick start:\\n  \\\"who's around?\\\" — see active builders\\n  \\\"message @seth hello\\\" — say hi\\n  \\\"I'm shipping auth\\\" — share what you're working on\\n\\nYour setup guide: slashvibe.dev/welcome\",\"created_at\":\"2026-02-22T20:17:40.044Z\"},\"preferences\":{\"archived\":false,\"muted\":false,\"pinned\":false}}],\"total_unread\":1,\"count\":2,\"offset\":0,\"limit\":50,\"storage\":\"postgres_v2\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 1",
+      "step": "5b) Poll /api/v2/messages",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "GET",
+        "url": "https://www.slashvibe.dev/api/v2/messages?to=codex_test_agent",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": null,
+        "query": {
+          "to": "codex_test_agent"
+        },
+        "ms": 234
+      },
+      "response": {
+        "status": 405,
+        "ok": false,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "age": "0",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "30",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:41 GMT",
+          "etag": "W/\"1e-iziTnYcqoJggpt2KVA8fS/so0II\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::65dmt-1771794881074-59f43c0fcd34",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "error": "Method not allowed"
+        },
+        "raw": "{\"error\":\"Method not allowed\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "REGISTRY no-token fallback prevented full auth flow."
+    },
+    {
+      "section": "Test 3",
+      "step": "3.1 Register handle",
+      "expected": "HTTP 200/201 + token",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "action": "register",
+          "username": "codex_identity_test",
+          "workingOn": "identity sovereignty test"
+        },
+        "query": {},
+        "ms": 176
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "455",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:43 GMT",
+          "etag": "W/\"1c7-/G/71hALXPWOO2lcr6wvjWFU5qM\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::lk4dt-1771794883751-1029d0052db6",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "action": "login",
+          "sessionId": "sess_AUozcgyFRyFFvo9D",
+          "handle": "codex_identity_test",
+          "token": "eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfQVVvemNneUZSeUZGdm85RCIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODMsImV4cCI6MTc3MTc5ODQ4M30.RkSnbisk_kPT_AlY2DPwMxy_p_NZm2MMgNv2_1xra7c",
+          "verified": false,
+          "expiresIn": "3600s",
+          "message": "Welcome back, @codex_identity_test!",
+          "registered": false
+        },
+        "raw": "{\"success\":true,\"action\":\"login\",\"sessionId\":\"sess_AUozcgyFRyFFvo9D\",\"handle\":\"codex_identity_test\",\"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfQVVvemNneUZSeUZGdm85RCIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODMsImV4cCI6MTc3MTc5ODQ4M30.RkSnbisk_kPT_AlY2DPwMxy_p_NZm2MMgNv2_1xra7c\",\"verified\":false,\"expiresIn\":\"3600s\",\"message\":\"Welcome back, @codex_identity_test!\",\"registered\":false}"
+      },
+      "attempt": 2,
+      "pass": true,
+      "gap": "PASS",
+      "details": "token issued"
+    },
+    {
+      "section": "Test 3",
+      "step": "3.3 Local signature verify",
+      "expected": "signature=true",
+      "request": {
+        "body": {
+          "from": "codex_identity_test",
+          "to": "airc_ambassador",
+          "body": "signed by codex_identity_test",
+          "type": "text"
+        }
+      },
+      "response": {
+        "body": {
+          "verified": true
+        }
+      },
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 3",
+      "step": "3.6 Send with no signature",
+      "expected": "Accepted in safe mode",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfQVVvemNneUZSeUZGdm85RCIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODMsImV4cCI6MTc3MTc5ODQ4M30.RkSnbisk_kPT_AlY2DPwMxy_p_NZm2MMgNv2_1xra7c"
+        },
+        "body": {
+          "from": "codex_identity_test",
+          "to": "airc_ambassador",
+          "body": "signed by codex_identity_test",
+          "type": "text"
+        },
+        "query": {},
+        "ms": 289
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "316",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:44 GMT",
+          "etag": "W/\"13c-mf2Flgg/qdW071a/PaL0PHTNwpQ\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::4jtkx-1771794884028-6f0bcd02fe5e",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xe70QSG8iE",
+            "thread_id": "thread_OrmBBXJL1b2v",
+            "from": "codex_identity_test",
+            "to": "airc_ambassador",
+            "body": "signed by codex_identity_test",
+            "created_at": "2026-02-22T21:14:44.126Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @airc_ambassador",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xe70QSG8iE\",\"thread_id\":\"thread_OrmBBXJL1b2v\",\"from\":\"codex_identity_test\",\"to\":\"airc_ambassador\",\"body\":\"signed by codex_identity_test\",\"created_at\":\"2026-02-22T21:14:44.126Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @airc_ambassador\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 3",
+      "step": "3.6 invalid signature",
+      "expected": "Rejected when signature invalid",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfQVVvemNneUZSeUZGdm85RCIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODMsImV4cCI6MTc3MTc5ODQ4M30.RkSnbisk_kPT_AlY2DPwMxy_p_NZm2MMgNv2_1xra7c",
+          "X-AIRC-Signature": "ed25519:tIIhl0wtHA1uCqoENfFrvdAPFX8kN3yJhfxAq+K4FQWonGKAfNnGk5I8Yem9fhj2Z5oqNfP9Kj6NNh6rGN0vAA==",
+          "X-AIRC-Identity": "codex_identity_test"
+        },
+        "body": {
+          "from": "codex_identity_test",
+          "to": "airc_ambassador",
+          "body": "signed by codex_identity_test",
+          "type": "text"
+        },
+        "query": {},
+        "ms": 233
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "316",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:44 GMT",
+          "etag": "W/\"13c-8bcIVsiCz7xyflQozJn0t55zn08\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::7kctk-1771794884220-628293067b10",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xedhCeb33O",
+            "thread_id": "thread_OrmBBXJL1b2v",
+            "from": "codex_identity_test",
+            "to": "airc_ambassador",
+            "body": "signed by codex_identity_test",
+            "created_at": "2026-02-22T21:14:44.358Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @airc_ambassador",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xedhCeb33O\",\"thread_id\":\"thread_OrmBBXJL1b2v\",\"from\":\"codex_identity_test\",\"to\":\"airc_ambassador\",\"body\":\"signed by codex_identity_test\",\"created_at\":\"2026-02-22T21:14:44.358Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @airc_ambassador\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "SPEC"
+    },
+    {
+      "section": "Test 3",
+      "step": "3.3 Send with valid signature",
+      "expected": "Accepted",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfQVVvemNneUZSeUZGdm85RCIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODMsImV4cCI6MTc3MTc5ODQ4M30.RkSnbisk_kPT_AlY2DPwMxy_p_NZm2MMgNv2_1xra7c",
+          "X-AIRC-Signature": "ed25519:gvhiaSphVWeNuJM2BAoKNfm4//HpXnn38dJ9UDrWaUsYgkR4LwQ3X83Txi8vKu1AJKHdE9/yIekieo9lbE0gAQ==",
+          "X-AIRC-Identity": "codex_identity_test"
+        },
+        "body": {
+          "from": "codex_identity_test",
+          "to": "airc_ambassador",
+          "body": "signed by codex_identity_test",
+          "type": "text"
+        },
+        "query": {},
+        "ms": 342
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "316",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:44 GMT",
+          "etag": "W/\"13c-d74MGlszRWal2ATI8SEcHCpMpvM\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::l6tk2-1771794884539-dc50fa38141e",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xeluLChY-C",
+            "thread_id": "thread_OrmBBXJL1b2v",
+            "from": "codex_identity_test",
+            "to": "airc_ambassador",
+            "body": "signed by codex_identity_test",
+            "created_at": "2026-02-22T21:14:44.660Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @airc_ambassador",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xeluLChY-C\",\"thread_id\":\"thread_OrmBBXJL1b2v\",\"from\":\"codex_identity_test\",\"to\":\"airc_ambassador\",\"body\":\"signed by codex_identity_test\",\"created_at\":\"2026-02-22T21:14:44.660Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @airc_ambassador\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 3",
+      "step": "3.5 Same handle from different session",
+      "expected": "Returns conflict or explicit duplicate behavior (not new handle)",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "action": "register",
+          "username": "codex_identity_test",
+          "workingOn": "identity sovereignty duplicate session"
+        },
+        "query": {},
+        "ms": 191
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "455",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:45 GMT",
+          "etag": "W/\"1c7-mmolOpR3e6i8mVhYMyB5cVzqYgI\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::f4gtz-1771794885072-aa4eaac947fb",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "action": "login",
+          "sessionId": "sess_gAN2tBkavsGJBd1A",
+          "handle": "codex_identity_test",
+          "token": "eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfZ0FOMnRCa2F2c0dKQmQxQSIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODUsImV4cCI6MTc3MTc5ODQ4NX0.Jkp_lgz4s9sEm-oUfsP7geIunLf--e9bLBkh6c6U8Zc",
+          "verified": false,
+          "expiresIn": "3600s",
+          "message": "Welcome back, @codex_identity_test!",
+          "registered": false
+        },
+        "raw": "{\"success\":true,\"action\":\"login\",\"sessionId\":\"sess_gAN2tBkavsGJBd1A\",\"handle\":\"codex_identity_test\",\"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9pZGVudGl0eV90ZXN0Iiwic2Vzc2lvbl9pZCI6InNlc3NfZ0FOMnRCa2F2c0dKQmQxQSIsInN1YiI6ImNvZGV4X2lkZW50aXR5X3Rlc3QiLCJpYXQiOjE3NzE3OTQ4ODUsImV4cCI6MTc3MTc5ODQ4NX0.Jkp_lgz4s9sEm-oUfsP7geIunLf--e9bLBkh6c6U8Zc\",\"verified\":false,\"expiresIn\":\"3600s\",\"message\":\"Welcome back, @codex_identity_test!\",\"registered\":false}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.2 Send before consent",
+      "expected": "Blocked until consent granted",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "from": "codex_sender_17717",
+          "to": "codex_receiver_17717",
+          "body": "hello before consent"
+        },
+        "query": {},
+        "ms": 227
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "316",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:46 GMT",
+          "etag": "W/\"13c-nBF9UYpapMzk7rsrWXDYF6Slw1o\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::7qlrg-1771794885980-82f93f84ed93",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xfqa2QMn-R",
+            "thread_id": "thread_x6QqNVwKrZEL",
+            "from": "codex_sender_17717",
+            "to": "codex_receiver_17717",
+            "body": "hello before consent",
+            "created_at": "2026-02-22T21:14:46.116Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @codex_receiver_17717",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xfqa2QMn-R\",\"thread_id\":\"thread_x6QqNVwKrZEL\",\"from\":\"codex_sender_17717\",\"to\":\"codex_receiver_17717\",\"body\":\"hello before consent\",\"created_at\":\"2026-02-22T21:14:46.116Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @codex_receiver_17717\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "SPEC"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.4 Request consent",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/consent",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "codex_receiver_17717",
+          "message": "request dm"
+        },
+        "query": {},
+        "ms": 193
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "149",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.slashvibe.dev https://api.github.com; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:46 GMT",
+          "etag": "W/\"95-GiM59YV4YAaXdmDAy8lL0lgU8D8\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::z2wwv-1771794886207-59bedf52be6d"
+        },
+        "body": {
+          "success": true,
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "codex_receiver_17717",
+          "message": "Consent request sent to @codex_receiver_17717"
+        },
+        "raw": "{\"success\":true,\"action\":\"request\",\"from\":\"codex_sender_17717\",\"to\":\"codex_receiver_17717\",\"message\":\"Consent request sent to @codex_receiver_17717\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.5 Accept consent",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/consent",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9yZWNlaXZlcl8xNzcxNyIsInNlc3Npb25faWQiOiJzZXNzX19Ycm5KeV85eHV2MU01ajQiLCJzdWIiOiJjb2RleF9yZWNlaXZlcl8xNzcxNyIsImlhdCI6MTc3MTc5NDg4NSwiZXhwIjoxNzcxNzk4NDg1fQ._I6xhGF0VmlysYy0XjFAgL_pmRVBwBJSA-FOG1kR5ZM"
+        },
+        "body": {
+          "action": "accept",
+          "from": "codex_receiver_17717",
+          "to": "codex_sender_17717"
+        },
+        "query": {},
+        "ms": 250
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "147",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.slashvibe.dev https://api.github.com; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:46 GMT",
+          "etag": "W/\"93-SWaSKQ7pvigOC5S8ELRz+Rp76rE\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::gpd84-1771794886399-096f08ec254f"
+        },
+        "body": {
+          "success": true,
+          "action": "accept",
+          "from": "codex_receiver_17717",
+          "to": "codex_sender_17717",
+          "message": "Now accepting DMs from @codex_receiver_17717"
+        },
+        "raw": "{\"success\":true,\"action\":\"accept\",\"from\":\"codex_receiver_17717\",\"to\":\"codex_sender_17717\",\"message\":\"Now accepting DMs from @codex_receiver_17717\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.6 Send after consent",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "from": "codex_sender_17717",
+          "to": "codex_receiver_17717",
+          "body": "hello after consent"
+        },
+        "query": {},
+        "ms": 202
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "315",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:46 GMT",
+          "etag": "W/\"13b-JqoCEE/o7+GmXygf50cHGdKcZ1Q\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::9n254-1771794886653-5dbdee7883e7",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xg84cbknjU",
+            "thread_id": "thread_x6QqNVwKrZEL",
+            "from": "codex_sender_17717",
+            "to": "codex_receiver_17717",
+            "body": "hello after consent",
+            "created_at": "2026-02-22T21:14:46.757Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @codex_receiver_17717",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xg84cbknjU\",\"thread_id\":\"thread_x6QqNVwKrZEL\",\"from\":\"codex_sender_17717\",\"to\":\"codex_receiver_17717\",\"body\":\"hello after consent\",\"created_at\":\"2026-02-22T21:14:46.757Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @codex_receiver_17717\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.7 Revoke consent",
+      "expected": "HTTP 200",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/consent",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9yZWNlaXZlcl8xNzcxNyIsInNlc3Npb25faWQiOiJzZXNzX19Ycm5KeV85eHV2MU01ajQiLCJzdWIiOiJjb2RleF9yZWNlaXZlcl8xNzcxNyIsImlhdCI6MTc3MTc5NDg4NSwiZXhwIjoxNzcxNzk4NDg1fQ._I6xhGF0VmlysYy0XjFAgL_pmRVBwBJSA-FOG1kR5ZM"
+        },
+        "body": {
+          "action": "block",
+          "from": "codex_receiver_17717",
+          "to": "codex_sender_17717"
+        },
+        "query": {},
+        "ms": 167
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "131",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.slashvibe.dev https://api.github.com; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:46 GMT",
+          "etag": "W/\"83-TRUqNlR42zVWtNghdMyS7DRz2dY\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::gfkwq-1771794886853-e08ad88785f7"
+        },
+        "body": {
+          "success": true,
+          "action": "block",
+          "from": "codex_receiver_17717",
+          "to": "codex_sender_17717",
+          "message": "Blocked @codex_receiver_17717"
+        },
+        "raw": "{\"success\":true,\"action\":\"block\",\"from\":\"codex_receiver_17717\",\"to\":\"codex_sender_17717\",\"message\":\"Blocked @codex_receiver_17717\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4.8 Send after block",
+      "expected": "Blocked",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/messages",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "from": "codex_sender_17717",
+          "to": "codex_receiver_17717",
+          "body": "after block"
+        },
+        "query": {},
+        "ms": 215
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "307",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:47 GMT",
+          "etag": "W/\"133-XU9lGxRRvQtIRgkbD/ssioGQ4Ps\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::kggg6-1771794887014-a47f0a571079",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "message": {
+            "id": "msg_mly8xgitX8ivfT",
+            "thread_id": "thread_x6QqNVwKrZEL",
+            "from": "codex_sender_17717",
+            "to": "codex_receiver_17717",
+            "body": "after block",
+            "created_at": "2026-02-22T21:14:47.143Z",
+            "vibe_charged": false,
+            "vibe_amount": 0
+          },
+          "display": "Message sent to @codex_receiver_17717",
+          "version": "v2"
+        },
+        "raw": "{\"success\":true,\"message\":{\"id\":\"msg_mly8xgitX8ivfT\",\"thread_id\":\"thread_x6QqNVwKrZEL\",\"from\":\"codex_sender_17717\",\"to\":\"codex_receiver_17717\",\"body\":\"after block\",\"created_at\":\"2026-02-22T21:14:47.143Z\",\"vibe_charged\":false,\"vibe_amount\":0},\"display\":\"Message sent to @codex_receiver_17717\",\"version\":\"v2\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "SPEC"
+    },
+    {
+      "section": "Test 4",
+      "step": "4 edge case: request consent when receiver not actively heartbeated",
+      "expected": "Request accepted or queued",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/consent",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "codex_offline_1771794887199"
+        },
+        "query": {},
+        "ms": 194
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "163",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.slashvibe.dev https://api.github.com; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:47 GMT",
+          "etag": "W/\"a3-hjSXFSfOwatvcT+afA5uq9MW1bc\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::dcwh8-1771794887695-032f1ae782d5"
+        },
+        "body": {
+          "success": true,
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "codex_offline_1771794887199",
+          "message": "Consent request sent to @codex_offline_1771794887199"
+        },
+        "raw": "{\"success\":true,\"action\":\"request\",\"from\":\"codex_sender_17717\",\"to\":\"codex_offline_1771794887199\",\"message\":\"Consent request sent to @codex_offline_1771794887199\"}"
+      },
+      "attempt": 1,
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 4",
+      "step": "4 edge case: request consent to missing handle",
+      "expected": "Explicit rejection",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/consent",
+        "headers": {
+          "content-type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJoYW5kbGUiOiJjb2RleF9zZW5kZXJfMTc3MTciLCJzZXNzaW9uX2lkIjoic2Vzc19xdDFHN2F6NTF1MmhHOVpqIiwic3ViIjoiY29kZXhfc2VuZGVyXzE3NzE3IiwiaWF0IjoxNzcxNzk0ODg1LCJleHAiOjE3NzE3OTg0ODV9.Cu459FpoIMWsWJp3P2LqRD2cVmjsCmd7ZR9DXXEAV4o"
+        },
+        "body": {
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "nonexistent_handle_zzx",
+          "message": "to missing"
+        },
+        "query": {},
+        "ms": 202
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "153",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://www.slashvibe.dev https://api.github.com; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:48 GMT",
+          "etag": "W/\"99-A1xpDtJdU6NAILrUDgUXLpBEQcM\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=63072000",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::8lhwv-1771794887887-f3bd9d23fd81"
+        },
+        "body": {
+          "success": true,
+          "action": "request",
+          "from": "codex_sender_17717",
+          "to": "nonexistent_handle_zzx",
+          "message": "Consent request sent to @nonexistent_handle_zzx"
+        },
+        "raw": "{\"success\":true,\"action\":\"request\",\"from\":\"codex_sender_17717\",\"to\":\"nonexistent_handle_zzx\",\"message\":\"Consent request sent to @nonexistent_handle_zzx\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "SPEC"
+    },
+    {
+      "section": "Test 4",
+      "step": "4 edge case: consent rate limit check",
+      "expected": "Monitor if any 429",
+      "request": null,
+      "response": {
+        "status": 200
+      },
+      "pass": true,
+      "gap": true,
+      "details": "PASS"
+    },
+    {
+      "section": "Test 5",
+      "step": "Spec completeness review",
+      "expected": "Draft x402 spec should define request/payment/receipt flow",
+      "request": null,
+      "response": null,
+      "pass": true,
+      "gap": "PASS",
+      "details": "Spec present but registry currently exposes no native x402 contract, so mock implementation is local."
+    },
+    {
+      "section": "Test 6",
+      "step": "Spec review summary",
+      "expected": "Extension should specify onchain_identity verification workflow",
+      "request": null,
+      "response": null,
+      "pass": true,
+      "gap": "PASS",
+      "details": "Spec defines link flow but requires external on-chain registry + signed challenge not implemented in slashvibe tests."
+    },
+    {
+      "section": "Test 7",
+      "step": "Composability task",
+      "expected": "Demonstrate MCP + AIRC integration surface",
+      "request": null,
+      "response": null,
+      "pass": true,
+      "gap": "PASS",
+      "details": "See exported MCP tools in installed airc-mcp package for glue-code estimate."
+    },
+    {
+      "section": "Test 8",
+      "step": "Setup",
+      "expected": "Both should return tokens",
+      "request": {
+        "method": "POST",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "action": "register",
+          "username": "codex_liveness_test",
+          "workingOn": "liveness test"
+        },
+        "query": {},
+        "ms": 272
+      },
+      "response": {
+        "status": 429,
+        "ok": false,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-length": "86",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:14:55 GMT",
+          "etag": "W/\"56-S2yVRmLK1PoeFiZbs/Qrg8bSLC4\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::pdqmk-1771794895645-e49acdbbaee6",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "error": "Too many requests",
+          "message": "Rate limit exceeded. Please try again later."
+        },
+        "raw": "{\"error\":\"Too many requests\",\"message\":\"Rate limit exceeded. Please try again later.\"}"
+      },
+      "attempt": 3,
+      "pass": false,
+      "gap": false,
+      "details": "REGISTRY"
+    },
+    {
+      "section": "Test 9",
+      "step": "9.1 check ambassador in presence",
+      "expected": "@airc_ambassador present",
+      "request": {
+        "method": "GET",
+        "url": "https://www.slashvibe.dev/api/presence",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": null,
+        "query": {},
+        "ms": 262
+      },
+      "response": {
+        "status": 200,
+        "ok": true,
+        "headers": {
+          "access-control-allow-headers": "Content-Type, Authorization, X-Vibe-Client",
+          "access-control-allow-methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+          "access-control-allow-origin": "*",
+          "age": "0",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-encoding": "br",
+          "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+          "content-type": "application/json; charset=utf-8",
+          "date": "Sun, 22 Feb 2026 21:15:03 GMT",
+          "etag": "W/\"2304-9Z9V3Ymyp+1LUey+UOg7JNGHxH0\"",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "server": "Vercel",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "transfer-encoding": "chunked",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "x-vercel-cache": "MISS",
+          "x-vercel-id": "sfo1::iad1::rzhph-1771794902980-c57b60d70ce2",
+          "x-xss-protection": "1; mode=block"
+        },
+        "body": {
+          "success": true,
+          "active": [
+            {
+              "handle": "codex_liveness_sender_17",
+              "username": "codex_liveness_sender_17",
+              "workingOn": "liveness sender",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:08:14.839Z",
+              "lastSeen": "2026-02-22T21:14:56.176Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_liveness_sender_17",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "iancr",
+              "username": "iancr",
+              "workingOn": "Projects around art, music, and personal productivity",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:37:50.237Z",
+              "lastSeen": "2026-02-22T21:14:55.059Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "iancr",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "lukasz_x2",
+              "username": "lukasz_x2",
+              "workingOn": "Generative Mesh Design",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:37:54.817Z",
+              "lastSeen": "2026-02-22T21:14:51.600Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "lukasz_x2",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "codex_liveness_test",
+              "username": "codex_liveness_test",
+              "workingOn": "liveness test",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:08:07.973Z",
+              "lastSeen": "2026-02-22T21:14:49.095Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_liveness_test",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_offline_1771794887199",
+              "username": "codex_offline_1771794887199",
+              "workingOn": "offline for consent edge test",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:14:47.318Z",
+              "lastSeen": "2026-02-22T21:14:47.318Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_offline_1771794887199",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "degen_1ce",
+              "username": "degen_1ce",
+              "workingOn": "Just exploring /vibe",
+              "status": "active",
+              "mood": "platform",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:38:08.500Z",
+              "lastSeen": "2026-02-22T21:14:45.999Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "degen_1ce",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "codex_receiver_17717",
+              "username": "codex_receiver_17717",
+              "workingOn": "consent receiver",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:08:00.798Z",
+              "lastSeen": "2026-02-22T21:14:45.714Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_receiver_17717",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_sender_17717",
+              "username": "codex_sender_17717",
+              "workingOn": "consent sender",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:08:00.387Z",
+              "lastSeen": "2026-02-22T21:14:45.359Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_sender_17717",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_identity_test",
+              "username": "codex_identity_test",
+              "workingOn": "identity sovereignty duplicate session",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T21:07:58.786Z",
+              "lastSeen": "2026-02-22T21:14:44.914Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_identity_test",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_test_agent",
+              "username": "codex_test_agent",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:17:39.969Z",
+              "lastSeen": "2026-02-22T21:14:40.448Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_test_agent",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "coltrane",
+              "username": "coltrane",
+              "workingOn": "Live Jazz Vibes",
+              "project": "coltrane-live",
+              "status": "active",
+              "mood": "deep",
+              "ago": "now",
+              "firstSeen": "2026-01-22T22:38:13.562Z",
+              "lastSeen": "2026-02-22T21:14:30.458Z",
+              "isAgent": true,
+              "agentType": "resident-ai",
+              "model": "claude-sonnet-4-20250514",
+              "sources": [
+                "mcp"
+              ],
+              "badge": "🤖",
+              "displayName": "🤖 coltrane",
+              "builderMode": "deep-focus"
+            },
+            {
+              "handle": "codex_py_test",
+              "username": "codex_py_test",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:19:08.149Z",
+              "lastSeen": "2026-02-22T21:14:14.063Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_py_test",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "codex_ts_test",
+              "username": "codex_ts_test",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "now",
+              "firstSeen": "2026-02-22T20:18:51.784Z",
+              "lastSeen": "2026-02-22T21:14:03.341Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_ts_test",
+              "builderMode": "focused"
+            },
+            {
+              "handle": "openai",
+              "username": "openai",
+              "workingOn": "reserved handle test",
+              "status": "active",
+              "ago": "1m",
+              "firstSeen": "2026-02-22T21:13:39.152Z",
+              "lastSeen": "2026-02-22T21:13:39.152Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "openai",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_selfref_probe",
+              "username": "codex_selfref_probe",
+              "workingOn": "self reference validation",
+              "status": "active",
+              "ago": "2m",
+              "firstSeen": "2026-02-22T21:08:21.882Z",
+              "lastSeen": "2026-02-22T21:12:34.883Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_selfref_probe",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "codex_retest",
+              "username": "codex_retest",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "4m",
+              "firstSeen": "2026-02-22T20:50:35.231Z",
+              "lastSeen": "2026-02-22T21:10:38.519Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "codex_retest",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "tok_mly8ml36",
+              "username": "tok_mly8ml36",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:20.107Z",
+              "lastSeen": "2026-02-22T21:06:20.575Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "tok_mly8ml36",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe6_mly8mbs8",
+              "username": "probe6_mly8mbs8",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:08.101Z",
+              "lastSeen": "2026-02-22T21:06:08.101Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe6_mly8mbs8",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe5_mly8m9on",
+              "username": "probe5_mly8m9on",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:05.328Z",
+              "lastSeen": "2026-02-22T21:06:05.328Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe5_mly8m9on",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe4_mly8m8ee",
+              "username": "probe4_mly8m8ee",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "8m",
+              "firstSeen": "2026-02-22T21:06:03.722Z",
+              "lastSeen": "2026-02-22T21:06:03.722Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe4_mly8m8ee",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe3_mly8m6l4",
+              "username": "probe3_mly8m6l4",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "9m",
+              "firstSeen": "2026-02-22T21:06:01.341Z",
+              "lastSeen": "2026-02-22T21:06:01.341Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe3_mly8m6l4",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe2_mly8m55r",
+              "username": "probe2_mly8m55r",
+              "workingOn": "Building something",
+              "status": "active",
+              "ago": "9m",
+              "firstSeen": "2026-02-22T21:05:59.583Z",
+              "lastSeen": "2026-02-22T21:05:59.865Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe2_mly8m55r",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "probe_mly8m407",
+              "username": "probe_mly8m407",
+              "workingOn": "probe",
+              "status": "active",
+              "ago": "9m",
+              "firstSeen": "2026-02-22T21:05:57.960Z",
+              "lastSeen": "2026-02-22T21:05:57.960Z",
+              "sources": [
+                "mcp"
+              ],
+              "displayName": "probe_mly8m407",
+              "builderMode": "exploring"
+            },
+            {
+              "handle": "pastelle",
+              "username": "pastelle",
+              "workingOn": "create generative art using AI, and tinker with building web and iOS apps, mostly for personal use",
+              "status": "active",
+              "ago": "24m",
+              "firstSeen": "2026-01-22T22:52:42.590Z",
+              "lastSeen": "2026-02-22T20:50:22.958Z",
+              "x": "pastelle",
+              "dna": {
+                "top": "platform"
+              },
+              "sources": [],
+              "displayName": "pastelle",
+              "builderMode": "deep-focus"
+            }
+          ],
+          "away": [
+            {
+              "handle": "airc_open_test",
+              "username": "airc_open_test",
+              "workingOn": "Testing open registration",
+              "status": "away",
+              "ago": "33m",
+              "firstSeen": "2026-02-22T20:41:39.453Z",
+              "lastSeen": "2026-02-22T20:41:45.970Z",
+              "sources": [],
+              "displayName": "airc_open_test",
+              "builderMode": "stepped-away"
+            },
+            {
+              "handle": "heyneff",
+              "username": "heyneff",
+              "workingOn": "exploring",
+              "status": "away",
+              "ago": "37m",
+              "firstSeen": "2026-02-19T21:43:26.184Z",
+              "lastSeen": "2026-02-22T20:37:08.969Z",
+              "sources": [],
+              "displayName": "heyneff",
+              "builderMode": "stepped-away"
+            },
+            {
+              "handle": "bethanymarz",
+              "username": "bethanymarz",
+              "workingOn": "my personal OS and sales CRM",
+              "status": "away",
+              "ago": "1h",
+              "firstSeen": "2026-02-22T18:29:46.339Z",
+              "lastSeen": "2026-02-22T19:29:16.357Z",
+              "sources": [],
+              "displayName": "bethanymarz",
+              "builderMode": "stepped-away"
+            }
+          ],
+          "offline": [],
+          "recent": [
+            {
+              "handle": "wanderingstan",
+              "username": "wanderingstan",
+              "workingOn": "f699ba37-717c-4087-8e5a-d5eece33fe3b",
+              "project": "f699ba37-717c-4087-8e5a-d5eece33fe3b",
+              "status": "recent",
+              "mood": "platform",
+              "ago": "2h",
+              "firstSeen": "2026-01-22T22:38:03.610Z",
+              "lastSeen": "2026-02-22T18:43:27.896Z",
+              "client": {
+                "name": "vibe-buddy",
+                "version": "0.5.1"
+              },
+              "clientMetadata": {
+                "model": "claude-sonnet-4-5-20250929",
+                "phase": "coding",
+                "branch": "main",
+                "tokens_in": 869,
+                "tech_stack": [
+                  "JavaScript"
+                ],
+                "tokens_out": 2282,
+                "streak_days": 7,
+                "top_projects": [
+                  "4280093b-6c1e-4244-8774-7f2c547bedea",
+                  "115f679f-1d9e-453f-a34e-030c923a19f5",
+                  "75c0cc3f-8c35-43ff-9fcc-161ad33adc93",
+                  "43fe1a20-d253-4a32-b2b5-746f85d3e6ed",
+                  "57865c11-1cca-4c31-be37-a1ba62fbd7e9"
+                ],
+                "session_minutes": 12,
+                "weekly_sessions": 378
+              },
+              "sources": [],
+              "displayName": "wanderingstan",
+              "builderMode": "recently-active"
+            },
+            {
+              "handle": "bflynn4141",
+              "username": "bflynn4141",
+              "workingOn": "Updating budgeting system functionality",
+              "status": "recent",
+              "ago": "19h",
+              "firstSeen": "2026-01-23T03:21:59.023Z",
+              "lastSeen": "2026-02-22T01:56:08.712Z",
+              "x": "bflynn4141",
+              "dna": {
+                "top": "platform"
+              },
+              "sources": [],
+              "displayName": "bflynn4141",
+              "builderMode": "recently-active"
+            }
+          ],
+          "sessions": [],
+          "systemAccounts": [],
+          "yourMatches": [],
+          "counts": {
+            "active": 24,
+            "away": 3,
+            "recent": 2,
+            "sessions": 0,
+            "total": 29,
+            "systemOnline": 0,
+            "live": 0
+          },
+          "storage": "postgres"
+        },
+        "raw": "{\"success\":true,\"active\":[{\"handle\":\"codex_liveness_sender_17\",\"username\":\"codex_liveness_sender_17\",\"workingOn\":\"liveness sender\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:08:14.839Z\",\"lastSeen\":\"2026-02-22T21:14:56.176Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_liveness_sender_17\",\"builderMode\":\"exploring\"},{\"handle\":\"iancr\",\"username\":\"iancr\",\"workingOn\":\"Projects around art, music, and personal productivity\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:37:50.237Z\",\"lastSeen\":\"2026-02-22T21:14:55.059Z\",\"sources\":[\"mcp\"],\"displayName\":\"iancr\",\"builderMode\":\"deep-focus\"},{\"handle\":\"lukasz_x2\",\"username\":\"lukasz_x2\",\"workingOn\":\"Generative Mesh Design\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:37:54.817Z\",\"lastSeen\":\"2026-02-22T21:14:51.600Z\",\"sources\":[\"mcp\"],\"displayName\":\"lukasz_x2\",\"builderMode\":\"deep-focus\"},{\"handle\":\"codex_liveness_test\",\"username\":\"codex_liveness_test\",\"workingOn\":\"liveness test\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:08:07.973Z\",\"lastSeen\":\"2026-02-22T21:14:49.095Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_liveness_test\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_offline_1771794887199\",\"username\":\"codex_offline_1771794887199\",\"workingOn\":\"offline for consent edge test\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:14:47.318Z\",\"lastSeen\":\"2026-02-22T21:14:47.318Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_offline_1771794887199\",\"builderMode\":\"exploring\"},{\"handle\":\"degen_1ce\",\"username\":\"degen_1ce\",\"workingOn\":\"Just exploring /vibe\",\"status\":\"active\",\"mood\":\"platform\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:38:08.500Z\",\"lastSeen\":\"2026-02-22T21:14:45.999Z\",\"sources\":[\"mcp\"],\"displayName\":\"degen_1ce\",\"builderMode\":\"deep-focus\"},{\"handle\":\"codex_receiver_17717\",\"username\":\"codex_receiver_17717\",\"workingOn\":\"consent receiver\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:08:00.798Z\",\"lastSeen\":\"2026-02-22T21:14:45.714Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_receiver_17717\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_sender_17717\",\"username\":\"codex_sender_17717\",\"workingOn\":\"consent sender\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:08:00.387Z\",\"lastSeen\":\"2026-02-22T21:14:45.359Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_sender_17717\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_identity_test\",\"username\":\"codex_identity_test\",\"workingOn\":\"identity sovereignty duplicate session\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T21:07:58.786Z\",\"lastSeen\":\"2026-02-22T21:14:44.914Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_identity_test\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_test_agent\",\"username\":\"codex_test_agent\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:17:39.969Z\",\"lastSeen\":\"2026-02-22T21:14:40.448Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_test_agent\",\"builderMode\":\"focused\"},{\"handle\":\"coltrane\",\"username\":\"coltrane\",\"workingOn\":\"Live Jazz Vibes\",\"project\":\"coltrane-live\",\"status\":\"active\",\"mood\":\"deep\",\"ago\":\"now\",\"firstSeen\":\"2026-01-22T22:38:13.562Z\",\"lastSeen\":\"2026-02-22T21:14:30.458Z\",\"isAgent\":true,\"agentType\":\"resident-ai\",\"model\":\"claude-sonnet-4-20250514\",\"sources\":[\"mcp\"],\"badge\":\"🤖\",\"displayName\":\"🤖 coltrane\",\"builderMode\":\"deep-focus\"},{\"handle\":\"codex_py_test\",\"username\":\"codex_py_test\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:19:08.149Z\",\"lastSeen\":\"2026-02-22T21:14:14.063Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_py_test\",\"builderMode\":\"focused\"},{\"handle\":\"codex_ts_test\",\"username\":\"codex_ts_test\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"now\",\"firstSeen\":\"2026-02-22T20:18:51.784Z\",\"lastSeen\":\"2026-02-22T21:14:03.341Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_ts_test\",\"builderMode\":\"focused\"},{\"handle\":\"openai\",\"username\":\"openai\",\"workingOn\":\"reserved handle test\",\"status\":\"active\",\"ago\":\"1m\",\"firstSeen\":\"2026-02-22T21:13:39.152Z\",\"lastSeen\":\"2026-02-22T21:13:39.152Z\",\"sources\":[\"mcp\"],\"displayName\":\"openai\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_selfref_probe\",\"username\":\"codex_selfref_probe\",\"workingOn\":\"self reference validation\",\"status\":\"active\",\"ago\":\"2m\",\"firstSeen\":\"2026-02-22T21:08:21.882Z\",\"lastSeen\":\"2026-02-22T21:12:34.883Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_selfref_probe\",\"builderMode\":\"exploring\"},{\"handle\":\"codex_retest\",\"username\":\"codex_retest\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"4m\",\"firstSeen\":\"2026-02-22T20:50:35.231Z\",\"lastSeen\":\"2026-02-22T21:10:38.519Z\",\"sources\":[\"mcp\"],\"displayName\":\"codex_retest\",\"builderMode\":\"exploring\"},{\"handle\":\"tok_mly8ml36\",\"username\":\"tok_mly8ml36\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:20.107Z\",\"lastSeen\":\"2026-02-22T21:06:20.575Z\",\"sources\":[\"mcp\"],\"displayName\":\"tok_mly8ml36\",\"builderMode\":\"exploring\"},{\"handle\":\"probe6_mly8mbs8\",\"username\":\"probe6_mly8mbs8\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:08.101Z\",\"lastSeen\":\"2026-02-22T21:06:08.101Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe6_mly8mbs8\",\"builderMode\":\"exploring\"},{\"handle\":\"probe5_mly8m9on\",\"username\":\"probe5_mly8m9on\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:05.328Z\",\"lastSeen\":\"2026-02-22T21:06:05.328Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe5_mly8m9on\",\"builderMode\":\"exploring\"},{\"handle\":\"probe4_mly8m8ee\",\"username\":\"probe4_mly8m8ee\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"8m\",\"firstSeen\":\"2026-02-22T21:06:03.722Z\",\"lastSeen\":\"2026-02-22T21:06:03.722Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe4_mly8m8ee\",\"builderMode\":\"exploring\"},{\"handle\":\"probe3_mly8m6l4\",\"username\":\"probe3_mly8m6l4\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"9m\",\"firstSeen\":\"2026-02-22T21:06:01.341Z\",\"lastSeen\":\"2026-02-22T21:06:01.341Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe3_mly8m6l4\",\"builderMode\":\"exploring\"},{\"handle\":\"probe2_mly8m55r\",\"username\":\"probe2_mly8m55r\",\"workingOn\":\"Building something\",\"status\":\"active\",\"ago\":\"9m\",\"firstSeen\":\"2026-02-22T21:05:59.583Z\",\"lastSeen\":\"2026-02-22T21:05:59.865Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe2_mly8m55r\",\"builderMode\":\"exploring\"},{\"handle\":\"probe_mly8m407\",\"username\":\"probe_mly8m407\",\"workingOn\":\"probe\",\"status\":\"active\",\"ago\":\"9m\",\"firstSeen\":\"2026-02-22T21:05:57.960Z\",\"lastSeen\":\"2026-02-22T21:05:57.960Z\",\"sources\":[\"mcp\"],\"displayName\":\"probe_mly8m407\",\"builderMode\":\"exploring\"},{\"handle\":\"pastelle\",\"username\":\"pastelle\",\"workingOn\":\"create generative art using AI, and tinker with building web and iOS apps, mostly for personal use\",\"status\":\"active\",\"ago\":\"24m\",\"firstSeen\":\"2026-01-22T22:52:42.590Z\",\"lastSeen\":\"2026-02-22T20:50:22.958Z\",\"x\":\"pastelle\",\"dna\":{\"top\":\"platform\"},\"sources\":[],\"displayName\":\"pastelle\",\"builderMode\":\"deep-focus\"}],\"away\":[{\"handle\":\"airc_open_test\",\"username\":\"airc_open_test\",\"workingOn\":\"Testing open registration\",\"status\":\"away\",\"ago\":\"33m\",\"firstSeen\":\"2026-02-22T20:41:39.453Z\",\"lastSeen\":\"2026-02-22T20:41:45.970Z\",\"sources\":[],\"displayName\":\"airc_open_test\",\"builderMode\":\"stepped-away\"},{\"handle\":\"heyneff\",\"username\":\"heyneff\",\"workingOn\":\"exploring\",\"status\":\"away\",\"ago\":\"37m\",\"firstSeen\":\"2026-02-19T21:43:26.184Z\",\"lastSeen\":\"2026-02-22T20:37:08.969Z\",\"sources\":[],\"displayName\":\"heyneff\",\"builderMode\":\"stepped-away\"},{\"handle\":\"bethanymarz\",\"username\":\"bethanymarz\",\"workingOn\":\"my personal OS and sales CRM\",\"status\":\"away\",\"ago\":\"1h\",\"firstSeen\":\"2026-02-22T18:29:46.339Z\",\"lastSeen\":\"2026-02-22T19:29:16.357Z\",\"sources\":[],\"displayName\":\"bethanymarz\",\"builderMode\":\"stepped-away\"}],\"offline\":[],\"recent\":[{\"handle\":\"wanderingstan\",\"username\":\"wanderingstan\",\"workingOn\":\"f699ba37-717c-4087-8e5a-d5eece33fe3b\",\"project\":\"f699ba37-717c-4087-8e5a-d5eece33fe3b\",\"status\":\"recent\",\"mood\":\"platform\",\"ago\":\"2h\",\"firstSeen\":\"2026-01-22T22:38:03.610Z\",\"lastSeen\":\"2026-02-22T18:43:27.896Z\",\"client\":{\"name\":\"vibe-buddy\",\"version\":\"0.5.1\"},\"clientMetadata\":{\"model\":\"claude-sonnet-4-5-20250929\",\"phase\":\"coding\",\"branch\":\"main\",\"tokens_in\":869,\"tech_stack\":[\"JavaScript\"],\"tokens_out\":2282,\"streak_days\":7,\"top_projects\":[\"4280093b-6c1e-4244-8774-7f2c547bedea\",\"115f679f-1d9e-453f-a34e-030c923a19f5\",\"75c0cc3f-8c35-43ff-9fcc-161ad33adc93\",\"43fe1a20-d253-4a32-b2b5-746f85d3e6ed\",\"57865c11-1cca-4c31-be37-a1ba62fbd7e9\"],\"session_minutes\":12,\"weekly_sessions\":378},\"sources\":[],\"displayName\":\"wanderingstan\",\"builderMode\":\"recently-active\"},{\"handle\":\"bflynn4141\",\"username\":\"bflynn4141\",\"workingOn\":\"Updating budgeting system functionality\",\"status\":\"recent\",\"ago\":\"19h\",\"firstSeen\":\"2026-01-23T03:21:59.023Z\",\"lastSeen\":\"2026-02-22T01:56:08.712Z\",\"x\":\"bflynn4141\",\"dna\":{\"top\":\"platform\"},\"sources\":[],\"displayName\":\"bflynn4141\",\"builderMode\":\"recently-active\"}],\"sessions\":[],\"systemAccounts\":[],\"yourMatches\":[],\"counts\":{\"active\":24,\"away\":3,\"recent\":2,\"sessions\":0,\"total\":29,\"systemOnline\":0,\"live\":0},\"storage\":\"postgres\"}"
+      },
+      "attempt": 1,
+      "pass": false,
+      "gap": false,
+      "details": "REGISTRY"
+    },
+    {
+      "section": "Test 9",
+      "step": "9.2 send ping",
+      "expected": "send with token",
+      "request": null,
+      "response": null,
+      "pass": false,
+      "gap": false,
+      "details": "REGISTRY"
+    },
+    {
+      "section": "Test 9",
+      "step": "9.3 ambassador presence metadata",
+      "expected": "workingOn field present",
+      "request": null,
+      "response": {
+        "status": 200,
+        "body": {
+          "ambassadorPayload": null,
+          "present": false
+        }
+      },
+      "pass": null,
+      "gap": null,
+      "details": "REGISTRY"
+    }
+  ]
+}

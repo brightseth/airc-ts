@@ -1,3 +1,9 @@
 node_modules/
 dist/
 .npmrc
+
+# validation harness deps/venvs
+mcp-sdk-validation/node_modules/
+ts-sdk-validation/node_modules/
+py-sdk-validation/.venv/
+__pycache__/
